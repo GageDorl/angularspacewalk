@@ -17,10 +17,10 @@ export class HomeComponent {
         if(audio.paused){
             audio.play();
             Swal.fire({
-                title: 'HOL UP I JUST PULLED UP INNA NEW MERCEDES!',
-                width: 1000,
-                color: '#ff0000',
-
+                html: `<center><h1 style="color:red; font-size:100px; font-family:'Comic Sans MS';"><blink>HOL UP I JUST PULLED UP INNA NEW MERCEDES!</blink></h1><img src="https://sp4cew4lk4.net/assets/fire.gif"></center>`,
+                background: "url(https://sp4cew4lk4.net/assets/1star.gif)",
+                width:1000,
+                showConfirmButton: false
 
             })
         } else {

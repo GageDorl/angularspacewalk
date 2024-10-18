@@ -12,3 +12,14 @@
 #playButton:hover{
     background-color: rgba(128,128,128,.3);
 }
+.popUpContainer{
+    width: 1000px;
+    color: '#ff0000';
+    background-image: "url('https://sp4cew4lk4.net/assets/1star.gif')";
+    height:800px;
+    font-size: 100px;
+}
+.swal2-title{
+    color:red;
+    font-size: 100px;
+}
