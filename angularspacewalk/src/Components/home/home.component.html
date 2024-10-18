@@ -1,0 +1,11 @@
+<main>
+    <div id="playButton" (click)="toggleAudio()">
+        <img src="click1.gif" alt="click below this"><br>
+        🡣<br>
+        <img src="https://sp4cew4lk4.net/assets/mb-star.gif">
+    </div>
+    <audio #audio id="background-audio" loop>
+        <source [src]="audioUrl" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</main>
