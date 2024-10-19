@@ -1,1 +1,25 @@
-<p>contact works!</p>
+<h1>Contact me I guess</h1>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="text-inputs">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Jonathan Doeington" formControlName="nameControl">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="jonathan.doeington@emial.com" formControlName="emailControl">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-420-6969" formControlName="phoneControl">
+                <label id='msg-label' for="msg">What's up:</label>
+                <textarea id="msg" name="msg" formControlName="msgControl">Hey man, you a cutie, wanna frick</textarea>
+            </div>
+            <div id="check-label">Reason for inquiry:</div>
+            <div class="checkboxes">
+                <input type="checkbox" id="production" name="production" value="Production" formControlName="productionControl">
+                <label for="production"> Production</label><br>
+                <input type="checkbox" id="mixing" name="mixing" value="Mixing" formControlName="mixingControl">
+                <label for="mixing"> Mixing</label><br>
+                <input type="checkbox" id="other" name="other" value="Other" formControlName="otherControl">
+                <label for="other"> Other</label><br>
+                <input type="checkbox" id="bike" name="bike" value="bike" formControlName="bikeControl">
+                <label for="bike"> I have a bike</label>
+            </div>
+            <input type="submit" value="Send it my way homie">
+        </form>

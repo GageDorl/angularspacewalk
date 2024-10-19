@@ -1,0 +1,58 @@
+.checkboxes{
+    text-align: left;
+    margin:auto;
+    display: block;
+}
+form{
+    text-align: center;
+    margin:auto;
+    margin-top: 20px;
+    width:60%;
+    max-width: 1000px;
+}
+.text-inputs input[type=text],.text-inputs input[type=tel], #msg{
+    box-sizing: border-box;
+    margin:10px;
+    display: inline-block;
+    width:80%;
+}
+.text-inputs label{
+    display: inline-block;
+    width:10%;
+    text-align: right;
+    vertical-align: top;
+    margin-top:10px;
+}
+#msg{
+    height:100px;
+    vertical-align: top;
+    padding:5px; 
+}
+#msg-label{
+    width:15%;
+    margin-left:-5%;
+}
+input[type=submit]{
+    margin:10px;
+    padding:10px;
+}
+@media (min-width:800px){
+    .checkboxes{
+        width:20%;
+    }
+    
+}
+
+@media (max-width:800px){
+    .text-inputs label, #check-label, #msg-label{
+        font-size: 12px;
+        display: block;
+        width:100%;
+        margin:0;
+        text-align: center;
+    }
+    .text-inputs input[type=text],.text-inputs input[type=tel], #msg{
+        display: block;
+        width:100%
+    }
+}
