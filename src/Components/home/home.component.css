@@ -1,13 +1,17 @@
+.home-container{
+    height:100%;
+    display:grid;
+}
 #playButton{
     max-width:150px;
     cursor: pointer;
     margin:auto;
-    margin-top: 200px;
     border: 2px solid white;
     border-radius: 10px;
     padding:20px;
     color:white;
     text-align: center;
+    align-self: center;
 }
 #playButton:hover{
     background-color: rgba(128,128,128,.3);

@@ -1,0 +1,11 @@
+.aboutContainer{
+    position:relative;
+    background-color: rgba(255, 255, 255, .5);
+    height:90%;
+    width:80%;
+    margin:20px auto;
+    padding:20px;
+    box-sizing: border-box;
+    /* overflow-y:scroll; */
+}
+

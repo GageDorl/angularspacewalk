@@ -1,1 +1,14 @@
-<p>shop works!</p>
+<div class="shopContainer">
+    @for (item of items; track item.id){
+        <div class="shopItem">
+            <div class="title">{{item.title}}</div>
+            <img src="{{item.image}}" />
+            <div class="price">{{item.price}}</div>
+        </div>
+    }
+    <div class="shopItem">
+        <h3 style="grid-row: 1/4; align-self: center;">More Coming Soon<br>+</h3>
+
+    </div>
+</div>
+

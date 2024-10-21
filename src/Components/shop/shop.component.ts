@@ -8,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrl: './shop.component.css'
 })
 export class ShopComponent {
-
+  items=[
+    {
+      id:1, 
+      title: "Calm by Spacewalk",
+      image:'calm.png',
+      price:'$5'
+    },
+    {
+      id:2, 
+      title: "Another One by Spacewalk",
+      image:'calm.png',
+      price:'$5'
+    },
+  ];
 }

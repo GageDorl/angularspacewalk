@@ -1,3 +1,9 @@
+app-root{
+  display:grid;
+  grid-template-rows: auto 1fr;
+  height:100vh;
+}
+
 body{
     margin:0;
     background: url('https://sp4cew4lk4.net/assets/movestar.gif') repeat;
@@ -7,10 +13,12 @@ body{
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+
 .popupThing{
   font-size: 50px;
   text-align: center;
 }
+
 
 @media(max-width:1000px){
 .popupThing{
