@@ -1,6 +1,6 @@
 <div class="shopContainer">
     @for (item of items; track item.id){
-        <div class="shopItem">
+        <div class="shopItem" (click)="goToItem(item.id)">
             <div class="title">{{item.title}}</div>
             <img src="{{item.image}}" />
             <div class="price">{{item.price}}</div>

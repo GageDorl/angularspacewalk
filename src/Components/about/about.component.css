@@ -2,8 +2,6 @@
     position:relative;
     background-color: rgba(255, 255, 255, .5);
     height:90%;
-    width:80%;
-    margin:20px auto;
     padding:20px;
     box-sizing: border-box;
     font-size: larger;
@@ -26,34 +24,34 @@
     position: relative;
     display:inline;
     color: rgba(255, 255, 255, .09);
-  }
+}
   
 
-  .glitch::after {
+.glitch::after {
     color:white;
     content: attr(data-text);
     position: absolute;
     top: 0;
     left: 0;
-  }
+}
   
-  .glitch::after {
+.glitch::after {
     color:white;
     content: attr(data-text);
     position: absolute;
     top: 0;
     left: 0;
-  }
+}
   
-  .glitch::before {
+.glitch::before {
     animation: glitch-before .001s infinite linear alternate-reverse;
-  }
+}
   
-  .glitch::after {
+.glitch::after {
     animation: glitch-after .05s infinite linear alternate-reverse;
-  }
+}
   
-  @keyframes glitch-before {
+@keyframes glitch-before {
     0% {
       clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
       transform: translate(-2px, 2px);
@@ -66,22 +64,33 @@
       clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%);
       transform: translate(2px, -2px);
     }
-  }
+}
   
-  @keyframes glitch-after {
+@keyframes glitch-after {
     0% {
-      clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-      transform: translate(2px, -2px);
+        clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+        transform: translate(2px, -2px);
     }
     50% {
-      clip-path: polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
-      transform: translate(1px, 1px);
+        clip-path: polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
+        transform: translate(1px, 1px);
     }
     100% {
-      clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%);
-      transform: translate(-2px, 2px);
-    }
-  }
+        clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%);
+        transform: translate(-2px, 2px);
+}
+}
+
+
+.hidden{
+    display:none;
+}
+
+#profile{
+    display: block;
+    max-width:400px;
+    margin:auto;
+}
 
 #secret{
     cursor:help;
@@ -89,4 +98,47 @@
 
 .section{
     display: block;
+}
+
+.social{
+    max-width:100px;
+}
+
+@media (min-width:800px){
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap:20px;
+    }
+    .pageContainer{
+        width:90%;
+        margin:auto;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width:1000px){
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap:20px;
+    }
+    .pageContainer{
+        width:80%;
+        margin:auto;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width:1200px){
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap:20px;
+    }
+    .pageContainer{
+        width:50%;
+        margin:auto;
+        margin-top: 20px;
+    }
 }

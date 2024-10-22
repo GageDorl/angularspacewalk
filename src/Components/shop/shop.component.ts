@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shop',
@@ -22,4 +23,10 @@ export class ShopComponent {
       price:'$5'
     },
   ];
+
+  constructor(private router: Router){}
+
+  goToItem(id: number){
+    this.router.navigate(['/shop',id])
+  }
 }
