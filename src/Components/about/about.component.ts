@@ -12,7 +12,7 @@ import { takeUntil } from 'rxjs/operators';
 export class AboutComponent implements OnInit {
 
   text!: string;
-  textList: Array<string> = ['lsndkf', 'sndjfm', 'smdjfk','kdjsfn','asdfhj'];
+  textList: Array<string> = ['Rsndkf', 'Rsdjfm', 'Rmdjfk','Rdjsfn','Rsdfhj'];
   ngUnsubscribe: Subject<any> = new Subject();
 
   constructor() { }

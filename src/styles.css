@@ -9,6 +9,7 @@ body{
     background: url('https://sp4cew4lk4.net/assets/movestar.gif') repeat;
     color:white;
     text-align: center;
+    overflow-x: hidden;
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
