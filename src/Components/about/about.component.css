@@ -6,6 +6,87 @@
     margin:20px auto;
     padding:20px;
     box-sizing: border-box;
-    /* overflow-y:scroll; */
+    font-size: larger;
+    overflow-y:auto;
 }
 
+.caps{
+    margin:0;
+    display: inline;
+    color:red;
+    font-weight: bold;
+}
+
+.corrupt p{
+    margin:0;
+    display:inline;
+}
+
+.glitch {
+    position: relative;
+    display:inline;
+    color: rgba(255, 255, 255, .09);
+  }
+  
+
+  .glitch::after {
+    color:white;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .glitch::after {
+    color:white;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .glitch::before {
+    animation: glitch-before .001s infinite linear alternate-reverse;
+  }
+  
+  .glitch::after {
+    animation: glitch-after .05s infinite linear alternate-reverse;
+  }
+  
+  @keyframes glitch-before {
+    0% {
+      clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+      transform: translate(-2px, 2px);
+    }
+    50% {
+      clip-path: polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
+      transform: translate(-1px, -1px);
+    }
+    100% {
+      clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%);
+      transform: translate(2px, -2px);
+    }
+  }
+  
+  @keyframes glitch-after {
+    0% {
+      clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+      transform: translate(2px, -2px);
+    }
+    50% {
+      clip-path: polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
+      transform: translate(1px, 1px);
+    }
+    100% {
+      clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%);
+      transform: translate(-2px, 2px);
+    }
+  }
+
+#secret{
+    cursor:help;
+}
+
+.section{
+    display: block;
+}
