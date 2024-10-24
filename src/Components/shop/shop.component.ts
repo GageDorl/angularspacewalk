@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { ItemsService } from '../../services/items.service';
 
 @Component({
   selector: 'app-shop',
@@ -9,21 +10,7 @@ import { Router } from '@angular/router';
   styleUrl: './shop.component.css'
 })
 export class ShopComponent {
-  items=[
-    {
-      id:1, 
-      title: "Calm by Spacewalk",
-      image:'calm.png',
-      price:'$5'
-    },
-    {
-      id:2, 
-      title: "Another One by Spacewalk",
-      image:'calm.png',
-      price:'$5'
-    },
-  ];
-
+  itemsService = inject(ItemsService);
   constructor(private router: Router){}
 
   goToItem(id: number){
