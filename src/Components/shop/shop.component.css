@@ -1,3 +1,17 @@
+.loadingScreen{
+    display: block;
+    width: 100%;
+    margin-top:30px;
+    font-size: 3em;
+    text-align: center;
+}
+.price{
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+    align-self: center;
+}
 .shopContainer{
     display:grid;
     /* height:100%; */
@@ -17,13 +31,6 @@
 .shopItem img{
     height:100%;
     margin:auto;
-}
-.price{
-    text-align: right;
-    padding: 20px;
-    box-sizing: border-box;
-    font-size: 25px;
-    align-self: center;
 }
 .title{
     font-size: 25px;

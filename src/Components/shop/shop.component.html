@@ -1,14 +1,20 @@
-<div class="shopContainer">
-    @for (item of plugins; track item.id){
-        <div class="shopItem" (click)="goToItem(item.id)">
-            <div class="title">{{item.title}}</div>
-            <img src="{{item.image}}" />
-            <div class="price">{{item.price}}</div>
+@defer{
+    <div class="shopContainer">
+        @for (item of plugins; track item.id){
+            <div class="shopItem" (click)="goToItem(item.id)">
+                <div class="title">{{item.title}}</div>
+                <img src="{{item.image}}" />
+                <div class="price">{{item.price}}</div>
+            </div>
+        }
+        <div class="shopItem">
+            <h3 style="grid-row: 1/4; align-self: center;">More Coming Soon<br>+</h3>
         </div>
-    }
-    <div class="shopItem">
-        <h3 style="grid-row: 1/4; align-self: center;">More Coming Soon<br>+</h3>
-
     </div>
-</div>
+} @loading (minimum 1s){
+    <div class="loadingScreen">
+        Loading...
+    </div>
+}
+
 
