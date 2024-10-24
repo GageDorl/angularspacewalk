@@ -1,0 +1,42 @@
+@defer{
+    <div class="pageContainer">
+        <a routerLink=".." class="back"><img src='skulback.gif'></a>
+            @if (item){
+                <div class="grid">
+                    <div class="title">
+                        <h1>{{item.title}}</h1>
+                        <h2>by {{item.author}}</h2>
+                    </div>
+                    <div class="pluginCard">
+                        <img src="{{item.image}}">
+                    </div>
+                    <div class="description">
+                        {{item.description}}
+                    </div>
+                    <div class="about">
+                        <ul>
+                            @for (fact of item.facts; track fact){
+                                <li>{{fact}}</li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="video">
+                        <video></video>
+                    </div>
+                    <div class="buy">
+                        BUY NOW!
+                    </div>
+                    <div class="ad" (click)="goToManifesto()">
+                        <img src="ad.gif">
+                    </div>
+                </div>
+            }
+            @else{
+                <div>
+                    Plugin Not Found, Please Check ID
+                </div>
+            }
+    </div>
+} @loading (minimum 1s) {
+    
+}

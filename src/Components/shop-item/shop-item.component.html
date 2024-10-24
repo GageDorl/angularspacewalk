@@ -1,4 +1,4 @@
-<div class="pageContainer">
+@defer{<div class="pageContainer">
     <a routerLink=".." class="back"><img src='skulback.gif'></a>
         @if (item){
             <div class="grid">
@@ -30,9 +30,12 @@
                 </div>
             </div>
         }
-        @else{
+        <!-- @else{
             <div>
                 Plugin Not Found, Please Check ID
             </div>
-        }
-</div>
+        } -->
+</div>}
+@loading (minimum 1s){
+    Loading...
+}
