@@ -15,13 +15,19 @@ export class ShopItemComponent {
   
   constructor(private route: ActivatedRoute) {}
   id!: number;
+  itemsService = inject(ItemsService);
+  item!:any;
+  getItem(id:number){
+    this.item = this.itemsService.getItem(id)
+  }
   ngOnInit(){
     this.route.params.subscribe(params => {
       this.id = params['id'];
+      this.getItem(this.id);
+      
     });
   }
 
-  item = inject(ItemsService);
   goToManifesto(){
     window.open("https://www.marxists.org/archive/marx/works/1848/communist-manifesto/",'_blank');
   }

@@ -1,5 +1,5 @@
 <div class="shopContainer">
-    @for (item of itemsService.getItems(); track item.id){
+    @for (item of plugins; track item.id){
         <div class="shopItem" (click)="goToItem(item.id)">
             <div class="title">{{item.title}}</div>
             <img src="{{item.image}}" />

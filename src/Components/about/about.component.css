@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-size: larger;
     overflow-y:auto;
-    min-width:470px;
 }
 
 .caps{
@@ -63,8 +62,10 @@
 
 #profile{
     display: block;
+    width:100%;
     max-width:400px;
     margin:auto;
+    
 }
 
 #secret{
@@ -76,6 +77,7 @@
 }
 
 .social{
+    width:25%;
     max-width:100px;
 }
 

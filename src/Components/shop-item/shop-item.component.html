@@ -1,34 +1,38 @@
 <div class="pageContainer">
     <a routerLink=".." class="back"><img src='skulback.gif'></a>
-        <div class="grid">
-            <div class="title" [@if]="item.getItem(id)!=null">
-                <h1>{{item.getItem(id).title}}</h1>
-                <h2>by {{item.getItem(id).author}}</h2>
+        @if (item){
+            <div class="grid">
+                <div class="title">
+                    <h1>{{item.title}}</h1>
+                    <h2>by {{item.author}}</h2>
+                </div>
+                <div class="pluginCard">
+                    <img src="{{item.image}}">
+                </div>
+                <div class="description">
+                    {{item.description}}
+                </div>
+                <div class="about">
+                    <ul>
+                        @for (fact of item.facts; track fact){
+                            <li>{{fact}}</li>
+                        }
+                    </ul>
+                </div>
+                <div class="video">
+                    <video></video>
+                </div>
+                <div class="buy">
+                    BUY NOW!
+                </div>
+                <div class="ad" (click)="goToManifesto()">
+                    <img src="ad.gif">
+                </div>
             </div>
-            <div class="pluginCard">
-                <img src="{{item.getItem(id).image}}">
+        }
+        @else{
+            <div>
+                Plugin Not Found, Please Check ID
             </div>
-            <div class="description">
-                {{item.getItem(id).description}}
-            </div>
-            <div class="about">
-                <ul>
-                    @for (fact of item.getItem(id).facts; track fact){
-                        <li>{{fact}}</li>
-                    }
-                </ul>
-            </div>
-            <div class="video">
-                <video></video>
-            </div>
-            <div class="buy">
-                BUY NOW!
-            </div>
-            <div class="ad" (click)="goToManifesto()">
-                <img src="ad.gif">
-            </div>
-        </div>
-        <div [@else]>
-            Plugin Not Found, Please Check ID
-        </div>
+        }
 </div>

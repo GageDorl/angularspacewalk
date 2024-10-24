@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../Components/header/header.component';
 
@@ -9,6 +9,12 @@ import { HeaderComponent } from '../Components/header/header.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
   title = 'angularspacewalk';
+  plugins: any[] = [];
+  app: any;
+  db: any;
+  
 }
+
+

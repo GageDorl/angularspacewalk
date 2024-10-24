@@ -11,28 +11,29 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class AboutComponent implements OnInit {
 
-  text!: string;
+  text: string ='';
   textList: Array<string> = ['Rsndkf', 'Rsdjfm', 'Rmdjfk','Rdjsfn','Rsdfhj'];
+  text1: string = '';
+  textList1: Array<string> = ['against me', 'adainst we', 'ggainst ma', 'againsf me']
+
+
   ngUnsubscribe: Subject<any> = new Subject();
 
   constructor() { }
 
   ngOnInit() {
-    // init the first fruit
     this.text = this.textList[0];
-    // create an interval that is going to fire every 5s
+    this.text1 = this.textList1[0];
     interval(15)
-      // unsubscribe from interval when the component is destroyed, averting any memory leak
       .pipe(takeUntil(this.ngUnsubscribe))
-      // subscribe to interval
       .subscribe(() => {
-        // find the current fruit index in the list
         const textIndex = this.textList.findIndex((text: string) => text === this.text);
-        // get the next fruit from the list
+        const textIndex1 = this.textList1.findIndex((text1: string) => text1 === this.text1);
         const nextText = this.textList[textIndex + 1];
-        // if next fruit is defined set displayed fruit with it
-        // else if next fruit is undefined that means you reached the end of the list so set the displayed fruit with the first list item
+        
+        const nextText1 = this.textList1[textIndex1 + 1];
         this.text = nextText ? nextText : this.textList[0];
+        this.text1 = nextText1 ? nextText1 : this.textList1[0];
       });
   }
 
